@@ -13,6 +13,7 @@
 </div>
 
 <div class="copyright">
+<!--
   <span class="power-by">
     {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
   </span>
@@ -21,7 +22,7 @@
     {{ T "theme" }} - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
-
+-->
   {{ if .Site.Params.busuanzi.enable -}}
   <div class="busuanzi-footer">
     {{ $spinner := "img/spinner.svg" | relURL -}}
@@ -47,4 +48,14 @@
     <span class="heart"><i class="iconfont icon-heart"></i></span><!--
     --><span>{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
   </span>
+
+  <!-- 网站流量统计 -->
+  <span id="busuanzi_container_site_pv">
+    <span id="busuanzi_value_site_pv"></span>
+  </span>
+  &nbsp;
+  <span id="busuanzi_container_site_uv">
+    <span id="busuanzi_value_site_uv"></span>
+  </span>
+
 </div>
